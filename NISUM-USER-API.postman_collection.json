@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "59b159a7-f8e0-4e15-9d43-945fd48fa2d6",
+		"name": "NISUM-USER-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "findAllUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8085/api/v1/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getToken",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8085/token",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\":\"Juan Rodriguez\",\r\n   \"email\":\"juan@rodriguez.cl\",\r\n   \"password\":\"Hunter22\",\r\n   \"phones\":[\r\n      {\r\n         \"number\":\"111\",\r\n         \"citycode\":\"1\",\r\n         \"contrycode\":\"57\"\r\n      }\r\n   ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/api/v1/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\": \"Nuevo Nombre\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/api/v1/users/dc77c429-17ba-47ac-bb8a-1b0cf3614334",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"dc77c429-17ba-47ac-bb8a-1b0cf3614334"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findUserById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8085/api/v1/users/dc77c429-17ba-47ac-bb8a-1b0cf3614334",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"dc77c429-17ba-47ac-bb8a-1b0cf3614334"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUserById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8085/api/v1/users/87151ed3-73d6-4527-a168-4b37b68fd727",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"87151ed3-73d6-4527-a168-4b37b68fd727"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
